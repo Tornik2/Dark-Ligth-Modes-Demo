@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&family=Sedgwick+Ave+Display&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+.container {
+  background-color: #ededed;
+  background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M82.42 180h-1.415L0 98.995v-2.827L6.167 90 0 83.833V81.004L81.005 0h2.827L90 6.167 96.167 0H98.996L180 81.005v2.827L173.833 90 180 96.167V98.996L98.995 180h-2.827L90 173.833 83.833 180H82.42zm0-1.414L1.413 97.58 8.994 90l-7.58-7.58L82.42 1.413 90 8.994l7.58-7.58 81.006 81.005-7.58 7.58 7.58 7.58-81.005 81.006-7.58-7.58-7.58 7.58zM175.196 0h-25.832c1.033 2.924 2.616 5.59 4.625 7.868C152.145 9.682 151 12.208 151 15c0 5.523 4.477 10 10 10 1.657 0 3 1.343 3 3v4h16V0h-4.803c.51.883.803 1.907.803 3 0 3.314-2.686 6-6 6s-6-2.686-6-6c0-1.093.292-2.117.803-3h10.394-13.685C161.18.938 161 1.948 161 3v4c-4.418 0-8 3.582-8 8s3.582 8 8 8c2.76 0 5 2.24 5 5v2h4v-4h2v4h4v-4h2v4h2V0h-4.803zm-15.783 0c-.27.954-.414 1.96-.414 3v2.2c-1.25.254-2.414.74-3.447 1.412-1.716-1.93-3.098-4.164-4.054-6.612h7.914zM180 17h-3l2.143-10H180v10zm-30.635 163c-.884-2.502-1.365-5.195-1.365-8 0-13.255 10.748-24 23.99-24H180v32h-30.635zm12.147 0c.5-1.416 1.345-2.67 2.434-3.66l-1.345-1.48c-1.498 1.364-2.62 3.136-3.186 5.14H151.5c-.97-2.48-1.5-5.177-1.5-8 0-12.15 9.84-22 22-22h8v30h-18.488zm13.685 0c-1.037-1.793-2.976-3-5.197-3-2.22 0-4.16 1.207-5.197 3h10.394zM0 148h8.01C21.26 148 32 158.742 32 172c0 2.805-.48 5.498-1.366 8H0v-32zm0 2h8c12.15 0 22 9.847 22 22 0 2.822-.53 5.52-1.5 8h-7.914c-.567-2.004-1.688-3.776-3.187-5.14l-1.346 1.48c1.09.99 1.933 2.244 2.434 3.66H0v-30zm15.197 30c-1.037-1.793-2.976-3-5.197-3-2.22 0-4.16 1.207-5.197 3h10.394zM0 32h16v-4c0-1.657 1.343-3 3-3 5.523 0 10-4.477 10-10 0-2.794-1.145-5.32-2.992-7.134C28.018 5.586 29.6 2.924 30.634 0H0v32zm0-2h2v-4h2v4h4v-4h2v4h4v-2c0-2.76 2.24-5 5-5 4.418 0 8-3.582 8-8s-3.582-8-8-8V3c0-1.052-.18-2.062-.512-3H0v30zM28.5 0c-.954 2.448-2.335 4.683-4.05 6.613-1.035-.672-2.2-1.16-3.45-1.413V3c0-1.04-.144-2.046-.414-3H28.5zM0 17h3L.857 7H0v10zM15.197 0c.51.883.803 1.907.803 3 0 3.314-2.686 6-6 6S4 6.314 4 3c0-1.093.292-2.117.803-3h10.394zM109 115c-1.657 0-3 1.343-3 3v4H74v-4c0-1.657-1.343-3-3-3-5.523 0-10-4.477-10-10 0-2.793 1.145-5.318 2.99-7.132C60.262 93.638 58 88.084 58 82c0-13.255 10.748-24 23.99-24h16.02C111.26 58 122 68.742 122 82c0 6.082-2.263 11.636-5.992 15.866C117.855 99.68 119 102.206 119 105c0 5.523-4.477 10-10 10zm0-2c-2.76 0-5 2.24-5 5v2h-4v-4h-2v4h-4v-4h-2v4h-4v-4h-2v4h-4v-4h-2v4h-4v-2c0-2.76-2.24-5-5-5-4.418 0-8-3.582-8-8s3.582-8 8-8v-4c0-2.64 1.136-5.013 2.946-6.66L72.6 84.86C70.39 86.874 69 89.775 69 93v2.2c-1.25.254-2.414.74-3.447 1.412C62.098 92.727 60 87.61 60 82c0-12.15 9.84-22 22-22h16c12.15 0 22 9.847 22 22 0 5.61-2.097 10.728-5.55 14.613-1.035-.672-2.2-1.16-3.45-1.413V93c0-3.226-1.39-6.127-3.6-8.14l-1.346 1.48C107.864 87.987 109 90.36 109 93v4c4.418 0 8 3.582 8 8s-3.582 8-8 8zM90.857 97L93 107h-6l2.143-10h1.714zM80 99c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm20 0c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6z' fill='%23a2a2a2' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+.container.dark {
+  background-color: #111112;
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M82.42 180h-1.415L0 98.995v-2.827L6.167 90 0 83.833V81.004L81.005 0h2.827L90 6.167 96.167 0H98.996L180 81.005v2.827L173.833 90 180 96.167V98.996L98.995 180h-2.827L90 173.833 83.833 180H82.42zm0-1.414L1.413 97.58 8.994 90l-7.58-7.58L82.42 1.413 90 8.994l7.58-7.58 81.006 81.005-7.58 7.58 7.58 7.58-81.005 81.006-7.58-7.58-7.58 7.58zM175.196 0h-25.832c1.033 2.924 2.616 5.59 4.625 7.868C152.145 9.682 151 12.208 151 15c0 5.523 4.477 10 10 10 1.657 0 3 1.343 3 3v4h16V0h-4.803c.51.883.803 1.907.803 3 0 3.314-2.686 6-6 6s-6-2.686-6-6c0-1.093.292-2.117.803-3h10.394-13.685C161.18.938 161 1.948 161 3v4c-4.418 0-8 3.582-8 8s3.582 8 8 8c2.76 0 5 2.24 5 5v2h4v-4h2v4h4v-4h2v4h2V0h-4.803zm-15.783 0c-.27.954-.414 1.96-.414 3v2.2c-1.25.254-2.414.74-3.447 1.412-1.716-1.93-3.098-4.164-4.054-6.612h7.914zM180 17h-3l2.143-10H180v10zm-30.635 163c-.884-2.502-1.365-5.195-1.365-8 0-13.255 10.748-24 23.99-24H180v32h-30.635zm12.147 0c.5-1.416 1.345-2.67 2.434-3.66l-1.345-1.48c-1.498 1.364-2.62 3.136-3.186 5.14H151.5c-.97-2.48-1.5-5.177-1.5-8 0-12.15 9.84-22 22-22h8v30h-18.488zm13.685 0c-1.037-1.793-2.976-3-5.197-3-2.22 0-4.16 1.207-5.197 3h10.394zM0 148h8.01C21.26 148 32 158.742 32 172c0 2.805-.48 5.498-1.366 8H0v-32zm0 2h8c12.15 0 22 9.847 22 22 0 2.822-.53 5.52-1.5 8h-7.914c-.567-2.004-1.688-3.776-3.187-5.14l-1.346 1.48c1.09.99 1.933 2.244 2.434 3.66H0v-30zm15.197 30c-1.037-1.793-2.976-3-5.197-3-2.22 0-4.16 1.207-5.197 3h10.394zM0 32h16v-4c0-1.657 1.343-3 3-3 5.523 0 10-4.477 10-10 0-2.794-1.145-5.32-2.992-7.134C28.018 5.586 29.6 2.924 30.634 0H0v32zm0-2h2v-4h2v4h4v-4h2v4h4v-2c0-2.76 2.24-5 5-5 4.418 0 8-3.582 8-8s-3.582-8-8-8V3c0-1.052-.18-2.062-.512-3H0v30zM28.5 0c-.954 2.448-2.335 4.683-4.05 6.613-1.035-.672-2.2-1.16-3.45-1.413V3c0-1.04-.144-2.046-.414-3H28.5zM0 17h3L.857 7H0v10zM15.197 0c.51.883.803 1.907.803 3 0 3.314-2.686 6-6 6S4 6.314 4 3c0-1.093.292-2.117.803-3h10.394zM109 115c-1.657 0-3 1.343-3 3v4H74v-4c0-1.657-1.343-3-3-3-5.523 0-10-4.477-10-10 0-2.793 1.145-5.318 2.99-7.132C60.262 93.638 58 88.084 58 82c0-13.255 10.748-24 23.99-24h16.02C111.26 58 122 68.742 122 82c0 6.082-2.263 11.636-5.992 15.866C117.855 99.68 119 102.206 119 105c0 5.523-4.477 10-10 10zm0-2c-2.76 0-5 2.24-5 5v2h-4v-4h-2v4h-4v-4h-2v4h-4v-4h-2v4h-4v-4h-2v4h-4v-2c0-2.76-2.24-5-5-5-4.418 0-8-3.582-8-8s3.582-8 8-8v-4c0-2.64 1.136-5.013 2.946-6.66L72.6 84.86C70.39 86.874 69 89.775 69 93v2.2c-1.25.254-2.414.74-3.447 1.412C62.098 92.727 60 87.61 60 82c0-12.15 9.84-22 22-22h16c12.15 0 22 9.847 22 22 0 5.61-2.097 10.728-5.55 14.613-1.035-.672-2.2-1.16-3.45-1.413V93c0-3.226-1.39-6.127-3.6-8.14l-1.346 1.48C107.864 87.987 109 90.36 109 93v4c4.418 0 8 3.582 8 8s-3.582 8-8 8zM90.857 97L93 107h-6l2.143-10h1.714zM80 99c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm20 0c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6z' fill='%23d7c0fc' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+a {
+  text-decoration: none;
+  padding: 3px 0;
+}
+a:hover,
+a:focus {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+/* ==========
+NAV/Header
+========= */
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: rgba(237,237,237,0.8);
+}
+
+.container.dark header {
+  background-color: rgba(17, 17, 18,0.7);
+  
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  gap: 1em;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 1px;
+}
+@media (min-width:900px) {
+  nav ul {
+    gap: 2em;
+  }
+  header {
+    padding: 1.2em 4em;
+  }
+}
+nav ul li a {
+  color: rgb(216, 72, 16);
+
+}
+.container.dark nav ul li a {
+  color: rgb(230, 228, 228);
+
+}
+nav ul li a:hover {
+    color: #30293b;
+    border-bottom: 3px solid #30293b;
+}
+
+.container.dark nav ul li a:hover {
+  color: #ffffff;
+  border-bottom: 3px solid #9c98a1
+}
+
+section {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: rgb(63, 63, 63);
+  font-style: italic;
+}
+.container.dark h1, 
+.container.dark p {
+  color: #ededed;
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+  opacity: 0.88;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ======
+About section
+======== */
+
+.wrapper {
+  width: 94%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    width: 70%;
+    grid-template-columns: 30% 30% 30%;
+  }
+}
+.img-wrapper {
+  border: 0.5px #30293b solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 1em 3em;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.43);
+}
+.img-wrapper:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.43)
+}
+
+.container.dark .img-wrapper {
+  background-color: #f1e9fa;
+}
+.container.dark .img-wrapper p {
+  color: #30293b;
+  text-shadow: none;
+  font-style: italic;
+}
+
+/* =========
+projects section
+========== */
+.btn-container {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container.dark .btn-container {
+  background-color: rgba(237,237,237,0.8);
+  padding: 1em;
+  border-radius: 10px;
+
+}
+
+button {
+  border: none;
+  padding: 0.7em 2em;
+  border-radius: 7px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+button:hover {
+  opacity: 0.8;
+}
+.first-btn {
+  background-color: rgb(216, 72, 16);
+  color: rgb(230, 228, 228);
+}
+.second-btn {
+  background-color: #30293b;
+  color: rgb(230, 228, 228);
+}
+.third-btn {
+  background-color: rgba(216, 72, 16, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.fourth-btn {
+  border:2px solid rgb(216, 72, 16);
+  color: rgb(3, 3, 3);
+}
+.fifth-btn {
+  border:2px solid #30293b;
+  color: rgb(15, 13, 13);
+}
+.sixth-btn {
+  border:2px solid rgba(216, 72, 16, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+.dummy-text {
+  grid-column: 1/-1;
+  background-color: rgba(77, 72, 72, 0.33);
+  padding: 1em;
+  border-radius: 10px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.container.dark .dummy-text {
+  background-color: #ededed;
+  color: #30293b;
+  text-shadow: none;
+}
+
+/* =======
+Contact
+========= */
+.contact {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+}
+.contact i {
+  font-size: 3rem;
+  color: #30293b;
+  cursor: pointer;
+}
+
+.container.dark .contact i {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 2px white;
+}
+.container.dark .contact i:hover {
+  color: #c0b4cf;
+}
+.contact i:hover {
+  color: rgb(216, 72, 16);
+}
+
+@media (min-width: 900px) {
+  .contact i {
+    font-size: 5em;
+  }
+}
+
+/* ========
+toggler
+======== */
+.switch {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.switch i, span {
+  font-size: 1.3em;
+}
+.toggler {
+  width: 30px;
+  border: 1px #30293b solid;
+  border-radius: 25%;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  height: 1.3em;
+  transition: all 0.5s;
+}
+.container.dark .toggler {
+  justify-content: flex-end;
+  border: 1px #ededed solid;
+
+}
+.circle {
+  width: 15px;
+  background-color: #30293b;
+  border-radius: 25%;
+}
+.container.dark .circle {
+  background-color: #ededed;
+}
+.container.dark span {
+  color: #ededed;
+}
+
+.moon {
+  display: none;
+}
+.container.dark .moon {
+  display: inline-block;
+  color: #ededed;
+}
+
+.container.dark .sun {
+  display: none;
+} 
